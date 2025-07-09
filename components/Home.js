@@ -7,14 +7,7 @@ export default function Home() {
           I'm <span className="home__title-color">Eko Aji</span><br />
           Web Developer
         </h1>
-
         <a href="#contact" className="button">Contact</a>
-      </div>
-
-      <div className="home__social">
-        <a href="#" aria-label="LinkedIn" className="home__social-icon"><i className='bx bxl-linkedin'></i></a>
-        <a href="#" aria-label="Behance" className="home__social-icon"><i className='bx bxl-behance'></i></a>
-        <a href="#" aria-label="GitHub" className="home__social-icon"><i className='bx bxl-github'></i></a>
       </div>
 
       <div className="home__img">

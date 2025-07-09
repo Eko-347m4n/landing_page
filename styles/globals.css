@@ -23,6 +23,8 @@
   --input-border-color: var(--secondary-color);
   --input-bg-color: #fff;
   --input-text-color: var(--text-color);
+  --home-blob-fill: var(--accent-color);
+  --home-social-icon-color: var(--text-color);
   
 
 
@@ -130,80 +132,7 @@ body {
   padding-right: var(--mb-2);
 }
 
-.l-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--header-bg);
-  box-shadow: 0 1px 4px var(--header-shadow);
-}
 
-/*===== NAV =====*/
-.nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: var(--font-semi);
-}
-@media (max-width: 767px) { /* md */
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--nav-menu-bg);
-    transition: 0.5s;
-  }
-}
-
-.nav__item {
-  margin-bottom: var(--mb-4);
-}
-.nav__link {
-  position: relative;
-  color: var(--text-color);
-}
-.nav__link:hover {
-  position: relative;
-}
-.nav__link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--primary-color);
-}
-.nav__logo {
-  color: var(--text-color);
-}
-.nav__toggle {
-  color: var(--text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/*Active menu*/
-.active-link::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--primary-color);
-}
-
-/*=== Show menu ===*/
-.show {
-  right: 0;
-}
 
 /*===== HOME =====*/
 .home {
@@ -221,19 +150,7 @@ body {
 .home__title-color {
   color: var(--primary-color);
 }
-.home__social {
-  display: flex;
-  flex-direction: column;
-}
-.home__social-icon {
-  width: max-content;
-  margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--home-social-icon-color);
-}
-.home__social-icon:hover {
-  color: var(--primary-color);
-}
+
 .home__img {
   position: absolute;
   right: 0;
@@ -413,19 +330,11 @@ body {
   .home {
     padding: 4rem 0 2rem;
   }
-  .home__social {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
-  }
-  .home__social-icon {
-    margin-bottom: 0;
-    margin-right: var(--mb-4);
-  }
+  
   .home__img {
     width: 18.75rem; /* 300px */
-    bottom: 25%;
+    top: 7rem;
+    bottom: auto;
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -480,3 +389,5 @@ body {
     width: 28.125rem; /* 450px */
   }
 }
+
+
