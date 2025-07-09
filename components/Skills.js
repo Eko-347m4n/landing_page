@@ -9,50 +9,31 @@ export default function Skills() {
           <p className="skills__text">
             I have a strong foundation in web development and a passion for creating beautiful, intuitive, and highly performant user experiences.
           </p>
-          <div className="skills__data">
-            <div className="skills__names">
-              <i className='bx bxl-html5 skills__icon'></i>
-              <span className="skills__name">HTML5</span>
-            </div>
-            <div className="skills__bar skills__html"></div>
-            <div>
-              <span className="skills__percentage">95%</span>
-            </div>
-          </div>
-          <div className="skills__data">
-            <div className="skills__names">
-              <i className='bx bxl-css3 skills__icon'></i>
-              <span className="skills__name">CSS3</span>
-            </div>
-            <div className="skills__bar skills__css"></div>
-            <div>
-              <span className="skills__percentage">85%</span>
-            </div>
-          </div>
-          <div className="skills__data">
-            <div className="skills__names">
-              <i className='bx bxl-javascript skills__icon'></i>
-              <span className="skills__name">JAVASCRIPT</span>
-            </div>
-            <div className="skills__bar skills__js"></div>
-            <div>
-              <span className="skills__percentage">75%</span>
-            </div>
-          </div>
-          <div className="skills__data">
-            <div className="skills__names">
-              <i className='bx bxs-paint skills__icon'></i>
-              <span className="skills__name">UX/UI</span>
-            </div>
-            <div className="skills__bar skills__ux"></div>
-            <div>
-              <span className="skills__percentage">90%</span>
-            </div>
+          <div className="flex justify-center gap-4">
+            <img height="170" src="https://github-readme-stats.vercel.app/api?username=Eko-347m4n&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" />
+            <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Eko-347m4n&layout=compact&theme=tokyonight&hide_border=true" />
           </div>
         </div>
 
         <div>
           <img src="/assets/img/work3.jpg" alt="" className="skills__img rounded-lg shadow-lg" />
+        </div>
+      </div>
+
+      <div>
+        <div align="center">
+          <a href="https://www.hackerrank.com/certificates/iframe/ed175df9149a" target="_blank" rel="noopener noreferrer">
+            <img src="asset/problem_solving_basic_certificate_page_1.jpg" alt="HackerRank: Problem Solving (Basic)" width="300" />
+          </a>
+          <a href="https://www.hackerrank.com/certificates/iframe/5c2467f5d84b" target="_blank" rel="noopener noreferrer">
+            <img src="asset/python_basic_certificate_page_1.jpg" alt="HackerRank: Python (Basic)" width="300" />
+          </a>
+          <a href="https://www.hackerrank.com/certificates/iframe/6f6662645202" target="_blank" rel="noopener noreferrer">
+            <img src="asset/javascript_basic_certificate_page_1.jpg" alt="HackerRank: JavaScript (Basic)" width="300" />
+          </a>
+          <a href="https://www.hackerrank.com/certificates/iframe/303e6bf49a19" target="_blank" rel="noopener noreferrer">
+            <img src="asset/r_basic_certificate_page_1.jpg" alt="HackerRank: R (Basic)" width="300" />
+          </a>
         </div>
       </div>
     </section>

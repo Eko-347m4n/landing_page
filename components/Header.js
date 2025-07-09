@@ -86,7 +86,7 @@ export default function Header() {
     >
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-slate-800 dark:text-slate-200">
-          Eko
+          Eko-347m4n
         </a>
 
         {/* Desktop Menu */}
