@@ -84,7 +84,7 @@ export default function Header() {
         isScrolled ? 'shadow-md' : ''
       }`}
     >
-      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-slate-800 dark:text-slate-200">
           Eko
         </a>
@@ -141,26 +141,26 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`md:hidden fixed inset-0 bg-white dark:bg-slate-900 shadow-lg backdrop-blur-sm z-40 transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed top-0 left-0 right-0 bottom-16 bg-white dark:bg-slate-900 shadow-lg backdrop-blur-sm z-40 transition-transform duration-300 ease-in-out ${
           showMenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex justify-end p-6">
+        <div className="flex justify-end px-6 py-4">
             <button
               aria-label="Close Menu"
               type="button"
-              className="p-3 rounded-md text-slate-600 dark:text-slate-300"
+              className="p-2 rounded-md text-slate-600 dark:text-slate-300"
               onClick={toggleMenu}
             >
               <i className="bx bx-x text-4xl"></i>
             </button>
         </div>
-        <ul className="flex flex-col items-center justify-center h-full space-y-8">
+        <ul className="flex flex-col items-center justify-start h-full pt-20 space-y-1">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-3xl font-medium ${
+                className={`text-2xl font-medium ${
                   activeSection === link.label.toLowerCase()
                     ? 'text-sky-500 dark:text-sky-400 font-semibold'
                     : 'text-gray-700 dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400'
