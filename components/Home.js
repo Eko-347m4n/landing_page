@@ -1,25 +1,27 @@
 export default function Home() {
   return (
-    <section className="home bd-grid container mx-auto px-6" id="home">
-      <div className="home__data text-center md:text-left">
-        <h1 className="home__title">
-          Hi,<br />
-          I'm <span className="home__title-color">Eko Aji</span><br />
-          Web Developer
-        </h1>
-        <a href="#contact" className="button">Contact</a>
-      </div>
+    <section className="home section" id="home">
+      <div className="home__container bd-grid container mx-auto px-6 md:grid md:grid-cols-2 md:gap-8">
+        <div className="home__data text-center md:text-left md:order-1">
+          <h1 className="home__title">
+            Hi,<br />
+            I'm <span className="home__title-color">Eko Aji</span><br />
+            Web Developer
+          </h1>
+          <a href="#contact" className="button">Contact</a>
+        </div>
 
-      <div className="home__img w-full mx-auto">
-        <svg className="home__blob max-w-full" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-          <mask id="mask0" masktype="alpha">
-            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-          </mask>
-          <g mask="url(#mask0)">
-            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-            <image className="home__blob-img" x="50" y="60" href="/assets/img/perfil.png" />
-          </g>
-        </svg>
+        <div className="home__img mx-auto md:order-2">
+          <svg className="home__blob max-w-full" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0" masktype="alpha">
+              <path d="M370.8,14.1C431.2,44,467.9,107.5,477.2,174.3C485.9,237.2,454.9,294.4,416.5,344.9C373.7,401.2,326.1,462.8,255.4,466.2C179.4,469.8,111.5,422.1,65.2,361.8C17.5,299.8,-17.2,219.6,9.2,145.9C34,76.6,114.9,54.7,184.1,29.5C245.8,6.9,311.9,-15,370.8,14.1Z" />
+            </mask>
+            <g mask="url(#mask0)">
+              <path d="M370.8,14.1C431.2,44,467.9,107.5,477.2,174.3C485.9,237.2,454.9,294.4,416.5,344.9C373.7,401.2,326.1,462.8,255.4,466.2C179.4,469.8,111.5,422.1,65.2,361.8C17.5,299.8,-17.2,219.6,9.2,145.9C34,76.6,114.9,54.7,184.1,29.5C245.8,6.9,311.9,-15,370.8,14.1Z" />
+              <image className="home__blob-img" width="100%" height="100%" href="/assets/img/perfil.png" />
+            </g>
+          </svg>
+        </div>
       </div>
     </section>
   )

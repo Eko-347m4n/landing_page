@@ -3,15 +3,19 @@ export default function Skills() {
     <section className="skills section" id="skills">
       <h2 className="section-title">Skills</h2>
 
-      <div className="skills__container bd-grid md:grid-cols-2 md:gap-8">
+      <div className="skills__container bd-grid container mx-auto px-6 md:grid-cols-2 md:gap-8">
         <div className="md:text-left">
           <h2 className="skills__subtitle">Professional Skills</h2>
           <p className="skills__text">
             I have a strong foundation in web development and a passion for creating beautiful, intuitive, and highly performant user experiences.
           </p>
           <div className="flex justify-center gap-4">
-            <img height="170" src="https://github-readme-stats.vercel.app/api?username=Eko-347m4n&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" />
-            <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Eko-347m4n&layout=compact&theme=tokyonight&hide_border=true" />
+            <a href="https://github.com/Eko-347m4n/Eko-347m4n" target="_blank" rel="noopener noreferrer">
+              <img height="170" src={`https://github-readme-stats.vercel.app/api?username=Eko-347m4n&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&cache_bust=${new Date().getTime()}`} />
+            </a>
+            <a href="https://github.com/Eko-347m4n/Eko-347m4n" target="_blank" rel="noopener noreferrer">
+              <img height="170" src={`https://github-readme-stats.vercel.app/api/top-langs/?username=Eko-347m4n&layout=compact&theme=tokyonight&hide_border=true&cache_bust=${new Date().getTime()}`} />
+            </a>
           </div>
         </div>
 

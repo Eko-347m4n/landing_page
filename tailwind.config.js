@@ -8,13 +8,31 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0F172A',
-        secondary: '#38BDF8',
-        accent: '#FACC15',
-        backgroundLight: '#F8FAFC',
-        backgroundDark: '#0F172A',
-        textDark: '#0F172A',
-        textLight: '#F8FAFC',
+        primary: {
+          light: '#1A202C',
+          dark: '#63B3ED',
+        },
+        secondary: {
+          light: '#4299E1',
+          dark: '#2D3748',
+        },
+        accent: '#F6AD55',
+        background: {
+          light: '#F7FAFC',
+          dark: '#1A202C',
+        },
+        text: {
+          light: '#2D3748',
+          dark: '#E2E8F0',
+        },
+        cardBg: {
+          light: '#FFFFFF',
+          dark: '#2D3748',
+        },
+        shadow: {
+          light: 'rgba(0, 0, 0, 0.08)',
+          dark: 'rgba(0, 0, 0, 0.5)',
+        },
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
