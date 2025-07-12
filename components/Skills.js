@@ -1,15 +1,39 @@
+import { useState } from 'react';
+
 export default function Skills() {
+  const [activeTab, setActiveTab] = useState('basic');
+
+  const certificates = {
+    basic: [
+      { href: "https://www.hackerrank.com/certificates/iframe/ed175df9149a", imgSrc: "/assets/img/problem_solving_basic_certificate_page_1.jpg", title: "Problem Solving (Basic)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/5c2467f5d84b", imgSrc: "/assets/img/python_basic_certificate_page_1.jpg", title: "Python (Basic)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/6f6662645202", imgSrc: "/assets/img/javascript_basic_certificate_page_1.jpg", title: "JavaScript (Basic)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/303e6bf49a19", imgSrc: "/assets/img/r_basic_certificate_page_1.jpg", title: "R (Basic)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/961684d02fb5", imgSrc: "/assets/img/sql_basic certificate_page-0001.jpg", title: "SQL (Basic)" },
+    ],
+    intermediate: [
+      { href: "https://www.hackerrank.com/certificates/iframe/3a787b57c031", imgSrc: "/assets/img/javascript_intermediate_certificate_page_1.jpg", title: "JavaScript (Intermediate)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/47ea5a71bee9", imgSrc: "/assets/img/rest_api_intermediate_certificate_page_1.jpg", title: "Rest API (Intermediate)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/47ea5a71bee9", imgSrc: "/assets/img/problem_solving_intermediate certificate_page_1.jpg", title: "Problem Solving (Intermediate)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/3c75c148d017", imgSrc: "/assets/img/sql_intermediate certificate_page-0001.jpg", title: "SQL (Intermediate)" },
+    ],
+    role: [
+      { href: "https://www.hackerrank.com/certificates/iframe/69bdfce40d73", imgSrc: "/assets/img/frontend_developer_react certificate_page-0001.jpg", title: "Frontend Developer (React)" },
+      { href: "https://www.hackerrank.com/certificates/iframe/e3be8601d008", imgSrc: "/assets/img/software_engineer certificate_page-0001.jpg", title: "Software Engineer" },
+    ],
+  };
+
   return (
     <section className="skills section" id="skills">
-      <h2 className="section-title">Skills</h2>
+      <h2 className="section-title">Skills & Certifications</h2>
 
-      <div className="skills__container bd-grid container mx-auto px-6 md:grid-cols-2 md:gap-8">
-        <div className="md:text-left">
+      <div className="skills__container container mx-auto px-6">
+        <div className="text-center md:text-left">
           <h2 className="skills__subtitle">Professional Skills</h2>
           <p className="skills__text">
             I have a strong foundation in web development and a passion for creating beautiful, intuitive, and highly performant user experiences.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 my-8">
             <a href="https://github.com/Eko-347m4n/Eko-347m4n" target="_blank" rel="noopener noreferrer">
               <img height="170" src={`https://github-readme-stats.vercel.app/api?username=Eko-347m4n&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&cache_bust=${new Date().getTime()}`} />
             </a>
@@ -18,54 +42,24 @@ export default function Skills() {
             </a>
           </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-6 mt-8">
-        {/* Basic Certificates */}
-        <div>
-          <h3 className="text-2xl font-semibold text-center mb-4">Basic Certificates</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/ed175df9149a" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/problem_solving_basic_certificate_page_1.jpg" alt="HackerRank: Problem Solving (Basic)" className="mx-auto" width="300" />
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/5c2467f5d84b" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/python_basic_certificate_page_1.jpg" alt="HackerRank: Python (Basic)" className="mx-auto" width="300" />
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/6f6662645202" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/javascript_basic_certificate_page_1.jpg" alt="HackerRank: JavaScript (Basic)" className="mx-auto" width="300" />
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/303e6bf49a19" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/r_basic_certificate_page_1.jpg" alt="HackerRank: R (Basic)" className="mx-auto" width="300" />
-              </a>
-            </div>
+        <div className="w-full">
+          <div className="flex justify-center border-b border-gray-300 dark:border-gray-700">
+            <button onClick={() => setActiveTab('basic')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'basic' ? 'border-b-2 border-blue-500 text-blue-500' : 'text-gray-500'}`}>Basic</button>
+            <button onClick={() => setActiveTab('intermediate')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'intermediate' ? 'border-b-2 border-blue-500 text-blue-500' : 'text-gray-500'}`}>Intermediate</button>
+            <button onClick={() => setActiveTab('role')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'role' ? 'border-b-2 border-blue-500 text-blue-500' : 'text-gray-500'}`}>Role</button>
           </div>
-        </div>
 
-        {/* Intermediate Certificates */}
-        <div className="mt-8">
-          <h3 className="text-2xl font-semibold text-center mb-4">Intermediate Certificates</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/3a787b57c031" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/javascript_intermediate_certificate_page_1.jpg" alt="HackerRank: JavaScript (Intermediate)" className="mx-auto" width="300" />
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https.hackerrank.com/certificates/iframe/47ea5a71bee9" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/rest_api_intermediate_certificate_page_1.jpg" alt="HackerRank: Rest API (Intermediate)" className="mx-auto" width="300" />
-              </a>
-            </div>
-            <div className="text-center">
-              <a href="https://www.hackerrank.com/certificates/iframe/47ea5a71bee9" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/img/problem_solving_intermediate%20certificate_page_1.jpg" alt="HackerRank: Problem Solving (Intermediate)" className="mx-auto" width="300" />
-              </a>
+          <div className="py-8">
+            <div className="flex flex-wrap justify-center certificate-grid">
+              {certificates[activeTab].map((cert, index) => (
+                <a key={index} href={cert.href} target="_blank" rel="noopener noreferrer" className="work__item" style={{width: '300px'}}>
+                  <img src={cert.imgSrc} alt={`HackerRank: ${cert.title}`} className="work__img-main" />
+                  <div className="work__overlay">
+                    <h3 className="work__title">{cert.title}</h3>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
