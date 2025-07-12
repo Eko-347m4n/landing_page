@@ -6,7 +6,7 @@ export default function Home() {
           <h1 className="home__title">
             Hi,<br />
             I'm <span className="home__title-color">Eko Aji</span><br />
-            Web Developer
+            Fullstack Developer
           </h1>
           <a href="#contact" className="button">Contact</a>
         </div>
@@ -18,7 +18,7 @@ export default function Home() {
             </mask>
             <g mask="url(#mask0)">
               <path d="M370.8,14.1C431.2,44,467.9,107.5,477.2,174.3C485.9,237.2,454.9,294.4,416.5,344.9C373.7,401.2,326.1,462.8,255.4,466.2C179.4,469.8,111.5,422.1,65.2,361.8C17.5,299.8,-17.2,219.6,9.2,145.9C34,76.6,114.9,54.7,184.1,29.5C245.8,6.9,311.9,-15,370.8,14.1Z" />
-              <image className="home__blob-img" width="100%" height="100%" href="/assets/img/perfil.png" />
+              <image className="home__blob-img" x="-100" y="11" width="380" height="467" href="/assets/img/mypixel-removebg-preview.png" />
             </g>
           </svg>
         </div>

@@ -5,7 +5,7 @@ export default function About() {
 
       <div className="about__container bd-grid container mx-auto px-6 md:grid-cols-2 md:gap-8">
         <div className="about__img">
-          <img src="/assets/img/about.jpg" alt="About Eko Aji" className="rounded-lg shadow-lg" />
+          <img src="/assets/img/mypixel-removebg-preview.png" alt="About Eko Aji" className="rounded-lg shadow-lg" />
         </div>
 
         <div className="text-center md:text-left">

@@ -167,7 +167,7 @@ body.sidebar-open {
   fill: var(--home-blob-fill);
 }
 .home__blob-img {
-  width: 100%;
+  width: 150%;
   height: auto;
 }
 
@@ -201,8 +201,8 @@ body.sidebar-open {
   justify-self: center;
 }
 .about__img img {
-  width: 200px;
-  border-radius: 0.5rem;
+  width: 350px;
+  border-radius: 3rem;
 }
 
 /* ===== SKILLS =====*/
@@ -386,6 +386,36 @@ body.sidebar-open {
   font-size: var(--smaller-font-size);
 }
 
+/* ===== CERTIFICATES ===== */
+.skills .container .grid {
+  /* Overriding Tailwind classes to be consistent with .work__container */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem; /* Consistent with work__container */
+  justify-content: center;
+  justify-items: center;
+}
+
+.skills .container .grid > div { /* This is the certificate item, which has .text-center class */
+  position: relative;
+  box-shadow: 0px 8px 20px var(--shadow-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px; /* Set max-width to prevent image from being too large */
+  transition: transform 0.3s ease;
+}
+
+.skills .container .grid > div:hover {
+  transform: scale(1.05);
+}
+
+.skills .container .grid > div img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media (max-width: 320px) { /* xs */
   .home {
@@ -448,9 +478,6 @@ body.sidebar-open {
   }
   .home {
     padding: 10rem 0 2rem;
-  }
-  .home__img {
-    /* Removed fixed width for better responsiveness */
   }
 }
 
